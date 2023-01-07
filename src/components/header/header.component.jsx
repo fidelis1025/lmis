@@ -11,12 +11,27 @@ const Header = () => (
     </div>
 
     <div>
-      <Link>Home<span></span></Link>
-      <Link>About Us<span></span></Link>
-      <Link>Databases <span></span></Link>
-      <Link>Indicators <span></span></Link>
-      <Link>Publications & Reports <span></span></Link>
-      <Link>News & Events <span></span></Link>
+      <Link className="" to="">
+        Home<span></span>
+      </Link>
+      <Link className="" to="">
+        About Us<span>&#x2EF;</span>
+      </Link>
+      <Link className="" to="">
+        Databases <span>&#x2EF;</span>
+      </Link>
+      <Link className="" to="">
+        Indicators <span>&#x2EF;</span>
+      </Link>
+      <Link className="" to="">
+        Publications & Reports <span>&#x2EF;</span>
+      </Link>
+      <Link className="" to="">
+        News & Events <span>&#x2EF;</span>
+      </Link>
+      <Link className="h-[2rem] w-[2rem] bg-[#FFFFFF] rounded-md" to="">
+        <span>&#xFE0E;</span>
+      </Link>
     </div>
   </div>
 );
