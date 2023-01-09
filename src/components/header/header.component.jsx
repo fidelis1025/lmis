@@ -1,10 +1,10 @@
 import React from "react";
-import { ReactComponent as Logo } from "../../assets/Logo.svg";
+import { ReactComponent as Logo } from "../../assets/Logo-1.svg";
 import { Link } from "react-router-dom";
 
 const Header = () => (
-  <div className="w-[90rem] h-[5.875rem] bg-[#488134]">
-    <div className="h-[60%] ">
+  <div className="w-full h-[5.875rem] bg-neongreen">
+    <div className="">
       <Link to="/">
         <Logo />
       </Link>
@@ -12,8 +12,10 @@ const Header = () => (
 
     <div>
       <Link className="" to="">
-        Home<span></span>
+        Home
+        <span></span>
       </Link>
+
       <Link className="" to="">
         About Us<span>&#x2EF;</span>
       </Link>
