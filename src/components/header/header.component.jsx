@@ -1,39 +1,39 @@
 import React from "react";
-import { ReactComponent as Logo } from "../../assets/Logo-1.svg";
+import { ReactComponent as Logo } from "../../assets/Logo.svg";
 import { Link } from "react-router-dom";
 
 const Header = () => (
-  <div className="w-full h-[5.875rem] bg-neongreen">
-    <div className="">
+  <div className=" flex w-full h-[5.875rem] text-base bg-[#478033]">
+    <div className="flex justify-center items-center ml-14">
       <Link to="/">
-        <Logo />
+        <Logo className=""/>
       </Link>
     </div>
 
-    <div>
-      <Link className="" to="">
-        Home
-        <span></span>
+    <div className="flex justify-center items-center ml-12">
+
+      <Link to="">
+       <p className="text-neutral-50 hover:border-b mr-14" >Home</p> 
+      </Link>
+      <Link className="flex space-x-2" to="">
+      <p className="text-neutral-50 hover:border-b mr-14">About Us</p> 
+      </Link>
+      <Link className="flex space-x-1" to="">
+      <p className="text-neutral-50 hover:border-b mr-14">Databases</p>  
+      </Link>
+      <Link className="flex space-x-1" to="">
+      <p className="text-neutral-50 hover:border-b mr-14">Indicators</p>  
+      </Link>
+      <Link className="flex space-x-1" to="">
+      <p className="text-neutral-50 hover:border-b mr-14"> Publications & Reports</p>  
+      </Link>
+      <Link className="flex space-x-1" to="">
+      <p className="text-neutral-50 hover:border-b mr-14">News & Events</p>  
+      </Link>
+      <Link className="h-[2rem] w-[2rem] border border-black bg-neutral-50 rounded-md" to="">
+        <span className="">&#xFE0E;</span>
       </Link>
 
-      <Link className="" to="">
-        About Us<span>&#x2EF;</span>
-      </Link>
-      <Link className="" to="">
-        Databases <span>&#x2EF;</span>
-      </Link>
-      <Link className="" to="">
-        Indicators <span>&#x2EF;</span>
-      </Link>
-      <Link className="" to="">
-        Publications & Reports <span>&#x2EF;</span>
-      </Link>
-      <Link className="" to="">
-        News & Events <span>&#x2EF;</span>
-      </Link>
-      <Link className="h-[2rem] w-[2rem] bg-[#FFFFFF] rounded-md" to="">
-        <span>&#xFE0E;</span>
-      </Link>
     </div>
   </div>
 );
