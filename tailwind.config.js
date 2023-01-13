@@ -7,11 +7,8 @@ module.exports = {
   theme: {
     extend: {
       color: {
-        colorGreen: 'hsl(104, 43%, 35%)',
+        'colorGreen': 'hsla(104, 43%, 35%, 0.85)',
       },
-      backgroundImage: {
-        'searchArea': "url('../images/unsplash_h5xEHzfepNk.png')",
-      }
     },
   },
   plugins: [],
