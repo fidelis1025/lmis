@@ -1,48 +1,20 @@
 import React from "react";
+import Box from "../box/box.component";
 
-class InfoBox extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      info: [
-        {
-          value: "200M approximately",
-          description: "National Population NBS, 2022",
-          id: 1,
-        },
-        {
-          value: "120M approximately",
-          description: "Employment Population NBS, 2022",
-          id: 2,
-        },
-        {
-          value: "9.79 %",
-          description: "Employment rate Macrotrends, 2022",
-          id: 3,
-        },
-        {
-          value: "35,987",
-          description: "Number of registered businesses CAC, 2022",
-          id: 4,
-        },
-        {
-          value: "43.6%",
-          description: "% of working population 18 & older NBS, 2022",
-          id: 5,
-        },
-      ],
-    };
-  }
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
+import { selectBoxitemsSections } from "../../redux/boxitems/boxitems.selector";
 
-  render(){
-    return(
-        <div className="absolute left-[9rem] top-[32rem]">
-            <div >
+const InfoBox = ({boxItems}) => (
+  <div className="absolute left-[9rem] top-[41rem] flex space-x-4">
+    {boxItems.map(({ id, ...otherBoxItems }) => (
+      <Box key={id} {...otherBoxItems} />
+    ))}
+  </div>
+);
 
-            </div>
-        </div>
-    )
-  }
-}
+const mapStateToProps = createStructuredSelector({
+  boxItems: selectBoxitemsSections,
+});
 
-export default InfoBox;
+export default connect(mapStateToProps)(InfoBox);

@@ -2,7 +2,7 @@ import React from "react";
 import { ReactComponent as Logo } from "../../assets/Logo.svg";
 import { Link } from "react-router-dom";
 
-const Header = () => (
+const GreenHeader = () => (
   <div className=" flex w-full h-[5.875rem] text-base text-neutral-50 bg-[#478033]">
     <div className="flex justify-center items-center ml-14">
       <Link to="/">
@@ -38,4 +38,4 @@ const Header = () => (
   </div>
 );
 
-export default Header;
+export default GreenHeader;
