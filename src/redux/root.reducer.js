@@ -3,6 +3,8 @@ import { persistReducer } from "redux-persist"
 import storage from "redux-persist/lib/storage"
 
 import boxitemsReducer from "./boxitems/boxitems.reducer";
+import infoboxReducer from "./infobox/infobox.reducer";
+import eventsReducer from "./events/events.reducer";
 
 
 const persistConfig = {
@@ -13,7 +15,9 @@ const persistConfig = {
 
 
 const rootReducer = combineReducers({
-    boxitems: boxitemsReducer
+    boxitems: boxitemsReducer,
+    infobox: infoboxReducer,
+    events: eventsReducer,
 })
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)

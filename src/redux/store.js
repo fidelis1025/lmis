@@ -16,11 +16,6 @@ const store = configureStore({
     })
 })
 
-
-
-
-
-
 let persistor = persistStore(store)
 
 export { store, persistor };
